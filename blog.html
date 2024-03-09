@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Tube</title>
+    <!-- Tailwind and DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./images/Icon.png" type="image/x-icon">
+</head>
+<body class="bg-white mt-10 mx-12 font-inter">
+    <!-- Logo and nav -->
+    <header>
+        <div class="flex flex-col gap-5 sm:flex-row sm:my-0 justify-between items-center">
+            <div class="flex flex-1 justify-start">
+                <img src="./images/Logo.png" onclick="window.location.assign('./')" class="hover:cursor-pointer" alt="">
+            </div>
+            <div class="flex flex-1 justify-center">
+                <h4 id="sort-by-view-btn" class="text-[#252525] text-base font-medium bg-[#25252533] rounded py-3 px-10">Blogs</h4>
+            </div>
+            <div class="flex flex-1 justify-end">
+                <button class="text-white text-base font-medium bg-[#FF1F3D] hover:opacity-80 rounded py-3 px-5" onclick="window.location.assign('./')">PH-Tube</button>
+            </div>
+        </div>
+        <div class="border border-[#17171733] w-full my-8">
+        </div>
+    </header>
+    <main class="mb-10">
+        <!-- Blog 1 (var, let, const) -->
+        <section class="rounded-xl shadow-xl p-6">
+            <h3 class="text-4xl font-medium my-6">Scope differences of JavaScript Variable Types (var, let & const)</h3>
+            <p class="text-lg text-justify">
+                The scope of a variable in JavaScript determines where the variable can be accessed in the code. There are three different scopes in JavaScript and they are:
+
+                <ul class="list-decimal pl-6 my-4">
+                    <li class="list-item"><span class="font-medium">Global scope:</span> The global scope is the outermost scope in a JavaScript program. Variables declared in the global scope are accessible from anywhere in the program.
+                    </li>
+                    <li class="list-item"><span class="font-medium">Function scope:</span> The function scope is the scope of a function. Variables declared in the function scope are only accessible within the function.
+                    </li>
+                    <li class="list-item"><span class="font-medium">Block scope:</span> The block scope is the scope of a block of code. Variables declared in the block scope are only accessible within the block.
+                    </li>
+                </ul>
+                The keywords <span class="italic">var</span>, <span class="italic">let</span>, and <span class="italic">const</span> are used to declare variables in JavaScript.
+
+                Variables declared with <span class="italic">var</span> are function-scoped. This means that they are accessible from within the function in which they are declared, and from within any nested functions.
+                Variables declared with <span class="italic">let</span> are block-scoped. This means that they are only accessible from within the block in which they are declared.
+                Like <span class="italic">var</span>, variables declared with <span class="italic">const</span> are also block-scoped, but they cannot be reassigned once they are initialized.
+            </p>
+        </section>
+        <!-- Blog 2 (null and undefined) -->
+        <section class="rounded-xl shadow-xl p-6">
+            <h3 class="text-4xl font-medium my-6">JS null and undefined, where to use which</h3>
+            <p class="text-lg text-justify">
+                The null and undefined keywords in JavaScript are used to represent the absence of a value.
+
+                <span class="italic">Null</span> is a value that can be assigned to a variable to indicate that the variable has no value. Whereas, <span class="italic">Undefined</span> is the default value of a 
+                variable that has not been assigned a value.
+                Some use cases of <span class="italic">null</span> and <span class="italic">undefined</span> are: 
+                <ul class="list-disc pl-6 my-4">
+                    <li class="list-item"><span class="italic">null</span> is used to indicate that a value is intentionally missing, such as when a user does not provide a value for a form field</li>
+                    <li class="list-item"><span class="italic">undefined</span> is used to indicate that a value is missing by default, such as when a variable is declared without being assigned a value.</li>
+                    <li class="list-item">Using the === (triple equals) operator to compare null and undefined to other values will check for both equality and identity, as it will return true if the value on the 
+                        left side of the operator is equal to the value on the right side and they are the same object.</li>
+                    <li class="list-item">Using the 'typeof' function on <span class="italic">null</span> will return an 'Object' whereas <span class="italic">undefined</span> will return 'undefined'.
+                    Since <span class="italic">null</span> is used explicitly to return non-existent values or existent of no value inside a variable, it's of type 'Object'.</li>
+                </ul>
+            </p>
+        </section>
+        <!-- Blog 3 (REST API) -->
+        <section class="rounded-xl shadow-xl p-6">
+            <h3 class="text-4xl font-medium my-6">What is REST API</h3>
+            <p class="text-lg text-justify">
+                <span class="font-semibold">REST API</span> stands for <span class="italic">Representational State Transfer Application Programming Interface</span>. It is a way of exposing data and functionality over the internet using HTTP requests. REST APIs are designed to be lightweight and easy to use, and they are often used to connect different applications or services.
+
+                The main principles of REST APIs are:
+
+                <ul class="list-disc pl-6 my-4">
+                    <li class="list-item">
+                        <span class="font-medium">Resource-oriented:</span> REST APIs are based on the concept of resources. A resource is anything that can be identified by a URI (Uniform Resource Identifier). For example, a customer might be a resource, and its URI might be /customers/12345.
+                    </li>
+                    <li class="list-item">
+                        <span class="font-medium">Stateless:</span> REST APIs are stateless. This means that each request must contain all of the information necessary to process it, and the server does not keep track of the state of the client.
+                    </li>
+                    <li class="list-item">
+                        <span class="font-medium">Cacheable:</span> REST APIs are designed to be cacheable. This means that the server can return a cached response to a request if the request has not changed.
+                    </li>
+                    <li class="list-item">
+                        <span class="font-medium">Layered:</span> REST APIs are layered. This means that the client does not need to know how the request is being processed by the server.
+                    </li>
+                    <li class="list-item">
+                        <span class="font-medium">Uniform Interface:</span> REST APIs use the Uniform Interface (UI) constraints. The UI constraints define how requests and responses are formatted and how errors are handled.
+                    </li>
+                    
+                </ul>
+                
+                REST APIs are a popular way to expose data and functionality over the internet. They are easy to use, scalable, and reliable. REST APIs are used by a wide variety of applications, including web applications, mobile applications, and cloud-based services.
+                Some examples of REST APIs:
+
+                <ul class="list-decimal pl-6 my-4">
+                    <li class="list-item">
+                        The GitHub API allows you to access information about GitHub repositories, users, and organizations.
+                    </li>
+                    <li class="list-item">
+                        The Google Maps API allows you to get directions, find businesses, and view maps.
+                    </li>
+                    <li class="list-item">
+                        The Stripe API allows you to process payments.
+                    </li>
+                    <li class="list-item">
+                        The Twilio API allows you to send and receive text messages.
+                    </li>
+                </ul>
+            </p>
+        </section>
+    </main>
+</body>
+</html>
